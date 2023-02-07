@@ -1,14 +1,5 @@
-import express from "express";
-import { ApolloServer } from "@apollo/server";
+import { startApolloServer } from "./app.js";
+import { typeDefs } from "./graphql/typeDefs.js";
+import { resolvers } from "./graphql/resolvers.js";
 
-const app = express();
-
-new ApolloServer({
-    typeDefs: ``,
-    resolvers: () => ({}),
-})
-
-
-
-app.listen(3000);
-console.log("Server is running on port 3000");
+startApolloServer(typeDefs, resolvers);
