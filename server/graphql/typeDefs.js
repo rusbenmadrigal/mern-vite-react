@@ -6,4 +6,16 @@ export const typeDefs = gql`
         hello: String
     }
 
-`;
+    type Mutation {
+        createProject(name: String, description: String): Project
+    }
+
+    type Project {
+        _id: ID
+        name: String
+        description: String
+        createdAt: String
+        updatedAt: String
+    }
+
+`
