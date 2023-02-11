@@ -3,6 +3,8 @@ import Project from "../models/Project.js";
 export const resolvers = {
   Query: {
     hello: () => "Hello world!",
+
+    projects: async () => await Project.find(),
   },
   Mutation: {
     createProject: async (_, { name, description }) => {
