@@ -1,31 +1,30 @@
-import Project from "../models/Project.js";
-import Task from "../models/Task.js";
+import { gql } from "apollo-server-express";
 
-export const resolvers = {
-  Query: {
-    hello: () => "Hello world!",
-    projects: async () => await Project.find(),
-    tasks: async () => await Task.find(),
-  },
-  Mutation: {
-    createProject: async (_, { name, description }) => {
-      const project = new Project({
-        name,
-        description,
-      });
-      const savedProject = await project.save();
-      return savedProject;
-    },
-    createTask: async (_, { title, projectId }) => {
-      const projectFound = await Project.findById(projectId);
-      if (!projectFound) throw new Error("Project not found");
+export const typeDefs = gql`
+  # Queries
+  type Query {
+    hello: String
+    projects: [Project]
+    tasks: [Task]
+  }
 
-      const task = new Task({
-        title,
-        projectId,
-      });
-      const savedTask = await task.save();
-      return savedTask;
-    },
-  },
-};
+  # Mutations
+  type Mutation {
+    createProject(name: String!, description: String!): Project
+    createTask(title: String!, projectId: String!): Task
+  }
+
+  # Objects
+  type Project {
+    _id: ID!
+    name: String!
+    description: String!
+    tasks: [Task]!
+  }
+
+  type Task {
+    _id: ID!
+    title: String!
+    project: Project!
+  }
+`;
