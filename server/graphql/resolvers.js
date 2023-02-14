@@ -1,7 +1,6 @@
 import Project from "../models/Project.js";
 import Task from "../models/Task.js";
 
-
 export const resolvers = {
   Query: {
     hello: () => "Hello world!",
@@ -29,6 +28,17 @@ export const resolvers = {
       });
       const savedTask = await task.save();
       return savedTask;
+    },
+
+    deleteProject: async (_, { _id }) => {
+      const deletedroject = await Project.findByIdAndDelete(_id);
+      if (!deletedroject) throw new Error("Project not found");
+      return deletedroject;
+    },
+    deleteTask: async (_, { _id }) => {
+      const deletedTask = await Task.findByIdAndDelete(_id);
+      if (!deletedTask) throw new Error("Task not found");
+      return deletedTask;
     },
   },
 };
