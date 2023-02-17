@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/rusbenmadrigal/mern-vite-react#readme",
   "dependencies": {
+    "@apollo/client": "^3.7.8",
     "@apollo/server": "^4.3.3",
     "cors": "^2.8.5",
     "express": "^4.18.2",
