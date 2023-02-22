@@ -15,7 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Navigate to="/projects" />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/projects/:projectId" element={<ProjecDetails />} />
+          <Route path="/projects/:id" element={<ProjecDetails />} />
         </Routes>
       </BrowserRouter>
     </ApolloProvider>

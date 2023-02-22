@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+
 export function ProjectCard({ project }) {
   const navigate = useNavigate();
 
