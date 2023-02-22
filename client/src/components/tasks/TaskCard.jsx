@@ -1,4 +1,8 @@
-export function TaskCard() {
-    return <div>TaskCard</div>;
+export function TaskCard({ task }) {
+    return <div>
+     
+     <h1>{task.title}</h1>
+     <button>Delete</button>
+    </div>;
   }
   
