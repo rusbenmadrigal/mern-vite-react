@@ -1,5 +1,5 @@
 # mern-vite-react
-Vite + React Web App
+Vite + React MERN Web App
 
 
 Simple "User Reminder Dashboard" project using ViteJS, GraphQL, Tailwind CSS. 🙂
@@ -8,4 +8,7 @@ Vite. js allows you to set up a development environment for frameworks like Reac
 
 Never stop coding, learning 🙂
 
-#javascript #css #reactjs #graphql #vitejs
+
+![alt text](https://media.licdn.com/dms/image/C4E22AQHpahckItP24w/feedshare-shrink_2048_1536/0/1677119941263?e=1680134400&v=beta&t=ZuA4nnskA2pabzkb8mlylasXAOb0oMafd00Scop6-ZU)
+
+![alt text](https://media.licdn.com/dms/image/C4E22AQHA8-Mz7gKQ3w/feedshare-shrink_2048_1536/0/1677119941299?e=1680134400&v=beta&t=Al0-krFZXX6Uy-LQu79sCCK6lm-d6WI758XVba5xM8A)
