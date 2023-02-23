@@ -1,5 +1,5 @@
-# mern-vite-react
-Vite + React MERN Web App
+# Vite + React MERN Web App
+by Russ Madrigal
 
 
 Simple "User Reminder Dashboard" project using ViteJS, GraphQL, Tailwind CSS. 🙂
