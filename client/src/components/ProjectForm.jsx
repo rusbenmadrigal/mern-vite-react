@@ -35,7 +35,7 @@ export function ProjectForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="w-2/5">
       {error && <p>{error.message}</p>}
 
       <input
@@ -43,14 +43,19 @@ export function ProjectForm() {
         name="name"
         placeholder="Write a title"
         onChange={handleChange}
+        className="bg-zinc-800 text-white rounded-lg shadow-lg p-4 block w-full mb-3"
       />
       <textarea
         name="description"
         rows="3"
         placeholder="Write a description"
         onChange={handleChange}
+        className="bg-zinc-800 text-white rounded-lg shadow-lg p-4 block w-full mb-3"
       ></textarea>
-      <button disabled={!Project.name || !Project.description || loading}>
+      <button
+        disabled={!Project.name || !Project.description || loading}
+        className="bg-green-500 px-4 py-1 rounded-md text-lg mb-3 disabled:bg-zinc-400"
+      >
         Create
       </button>
     </form>

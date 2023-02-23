@@ -22,8 +22,13 @@ export function TaskForm() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input type="text" name="title" />
-      <button>Add</button>
+      <input type="text" name="title" 
+       className="bg-zinc-900 text-white w-full p-2 rounded-lg mb-2"
+       placeholder="Add new task"
+      />
+      <button
+      className="bg-green-900 text-white w-full p-2 rounded-lg"
+      >Add</button>
     </form>
   );
 }
