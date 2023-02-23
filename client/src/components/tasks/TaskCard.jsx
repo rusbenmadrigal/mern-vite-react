@@ -7,6 +7,7 @@ export function TaskCard({ task }) {
     refetchQueries: ["getProject"],
   });
 
+   
   return (
     <div className="bg-zinc-900 px-5 py-3 mb-2 flex justify-between">
       <h1 className="text-sm">{task.title}</h1>
